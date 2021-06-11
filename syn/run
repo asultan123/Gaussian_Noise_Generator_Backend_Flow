@@ -1,0 +1,4 @@
+rm -rf  log/* report/* output/*
+dc_shell -f scripts/syn.tcl | tee log/syn.log
+rm -rf  command.log filenames.log
+fm_shell -f scripts/equiv.tcl | tee log/equiv.log

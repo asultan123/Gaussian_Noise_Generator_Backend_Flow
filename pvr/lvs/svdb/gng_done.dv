@@ -1,0 +1,6 @@
+# CALIBRE-LVS DISCREPANCY VIEWER TCL FILE 
+# FILE: svdb/gng_done.dv
+dv_start notcompared
+dv_cell {gng_done} {gng} notcompared
+dv_obj_count -transformed_nets {19418 19191} -transformed_inst {48349 30484} -transformed_port {20 22}
+dv_end

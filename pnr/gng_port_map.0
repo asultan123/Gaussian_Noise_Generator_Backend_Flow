@@ -1,0 +1,11 @@
+guide_constraints -body { u_gng_interp/u_gng_coef } -equivalent { u_gng_interp/u_gng_coef/addr[2]    u_gng_interp/u_gng_coef/IN0 }
+guide_constraints -body { u_gng_interp/u_gng_coef } -equivalent { u_gng_interp/u_gng_coef/addr[3]    u_gng_interp/u_gng_coef/IN1 }
+guide_constraints -body { u_gng_interp/u_gng_coef } -equivalent { u_gng_interp/u_gng_coef/addr[4]    u_gng_interp/u_gng_coef/IN2 }
+guide_constraints -body { u_gng_interp/u_gng_coef } -equivalent { u_gng_interp/u_gng_coef/addr[5]    u_gng_interp/u_gng_coef/IN3 }
+guide_constraints -body { u_gng_interp/u_gng_coef } -equivalent { u_gng_interp/u_gng_coef/addr[6]    u_gng_interp/u_gng_coef/IN4 }
+guide_constraints -body { u_gng_interp/u_gng_coef } -equivalent { u_gng_interp/u_gng_coef/addr[7]    u_gng_interp/u_gng_coef/IN5 }
+guide_constraints -body { u_gng_interp } -equivalent { u_gng_interp/rstn    u_gng_interp/IN0   u_gng_interp/IN1   u_gng_interp/IN2 }
+guide_constraints -body { u_gng_ctg } -equivalent { u_gng_ctg/rstn    u_gng_ctg/IN0   u_gng_ctg/IN1   u_gng_ctg/IN2   u_gng_ctg/IN3 }
+
+#-------------------------------------------------------------------
+

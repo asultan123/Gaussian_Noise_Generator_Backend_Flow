@@ -1,0 +1,7 @@
+# Automagically generated file: Please do not edit!
+lvs_LvsOutFile RUNDIR /home/mohamed/Desktop/ref_flow/pvr/lvs
+lvs_LvsfVersion 1
+lvs_LvsOutFile LVS_REPORT lvs.rep
+lvs_LvsOutFile SOURCE_NETLIST ./spice/gng.sp
+lvs_LvsOutFile RULES_FILE calibreLVS.rul
+lvs_LvsRunTimes 1524351656 1524351661

@@ -1,0 +1,5 @@
+set_object_boundary -boundary {  { 13.1000 82.4000 } { 116.6500 82.4000 } { 116.6500 13.8000 } { 13.1000 13.8000 } } [get_plan_groups { u_gng_ctg } ]
+set_object_boundary -boundary {  { 103.1600 216.8000 } { 217.5400 216.8000 } { 217.5400 135.6000 } { 103.1600 135.6000 } } [get_plan_groups { u_gng_interp/u_gng_smul_16_18_sadd_37 } ]
+set_object_boundary -boundary {  { 13.1000 216.8000 } { 103.1600 216.8000 } { 103.1600 135.6000 } { 13.1000 135.6000 } } [get_plan_groups { u_gng_interp/u_gng_smul_16_18 } ]
+set_object_boundary -boundary {  { 116.6500 135.6000 } { 217.5400 135.6000 } { 217.5400 13.8000 } { 116.6500 13.8000 } } [get_plan_groups { u_gng_interp/u_gng_coef } ]
+

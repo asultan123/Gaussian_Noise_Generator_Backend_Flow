@@ -1,0 +1,204 @@
+#@ # 
+#@ # Running pt_shell Version G-2012.06-SP2 for amd64 -- Aug 30, 2012
+#@ # Date:   Sat Apr 21 16:31:18 2018
+#@ # Run by: mohamed@localhost.localdomain
+#@ 
+
+source /usr/synopsys/PrimeTime/admin/setup/.synopsys_pt.setup
+#@ # -- Starting source /usr/synopsys/PrimeTime/admin/setup/.synopsys_pt.setup
+
+#@ #
+#@ # .synopsys_pt.setup: Initialization File for PrimeTime
+#@ #
+#@ 
+#@ 
+#@ #
+#@ # Enable stack trace output on fatal.  Not available for all architectures.
+#@ #
+#@ if { $sh_arch == "sparcOS5" || $sh_arch == "hpux10" ||      $sh_arch == "hp32" || $sh_arch == "linux" } {
+#@   set_unix_variable SYNOPSYS_TRACE ""
+#@ }
+#@ 
+#@ #
+#@ # Variable settings
+#@ #
+#@ 
+#@ #
+#@ # Synopsys strongly recommends that you use new variable message
+#@ # tracing for debugging purposes only.
+#@ #
+#@ set sh_new_variable_message true
+#@ 
+#@ #
+#@ # Synopsys strongly recommends that you uncomment the following command
+#@ # in order to set sh_command_abbrev_mode to the value "Command-Line-Only".
+#@ # Command abbreviation is intended as an interactive convenience.  Using
+#@ # abbreviations in scripts can cause commands to fail in subsequent releases.
+#@ # 
+#@ #set sh_command_abbrev_mode "Command-Line-Only"
+#@ 
+#@ #
+#@ # Some useful aliases
+#@ #
+#@ alias list_commands		help
+#@ alias report_constraints	report_constraint
+#@ alias report_clocks		report_clock
+#@ 
+#@ #
+#@ # The alias for get_clock was added when get_clock_network_objects
+#@ # was introduced, as it conflicts with get_clocks (and get_clock is a
+#@ # typical abbreviation for get_clocks)
+#@ #
+#@ alias get_clock get_clocks
+#@ 
+#@ 
+#@ #
+#@ #
+#@ # The alias of q to quit is commented out.  Remove the comment 
+#@ # character if you want this alias.  Some users find that having 
+#@ # this particular alias causes problems when mixed with page-mode
+#@ # for reports - an accidental repeated 'q' not only cancels the
+#@ # output but exits the tool.
+#@ #
+#@ #alias q quit
+#@ 
+#@ # -- End source /usr/synopsys/PrimeTime/admin/setup/.synopsys_pt.setup
+
+set link_path  "* /home/standard_cell_libraries/NangateOpenCellLibrary_PDKv1_3_v2010_12/lib/Front_End/Liberty/NLDM/NangateOpenCellLibrary_ff1p25v0c.db"
+read_verilog "../../../pnr/output_verilog_withphysical"
+current_design gng
+link
+source ../../../syn/cons/cons.tcl
+#@ # -- Starting source ../../../syn/cons/cons.tcl
+
+#@ create_clock -name clk -period 4 -waveform {0 2} [get_ports clk]
+#@ set_input_delay -max 2 -clock [get_clocks clk] [remove_from_collection [all_inputs] [get_ports clk]]
+#@ set_output_delay -max 2 -clock [get_clocks clk] [all_outputs]
+#@ set_clock_uncertainty 0.35 [get_clocks]
+#@ set_false_path -hold -from [remove_from_collection [all_inputs] [get_ports clk]]
+#@ set_false_path -hold -to [all_outputs]
+#@ 
+#@ # -- End source ../../../syn/cons/cons.tcl
+
+read_parasitics ../../rcxt/cmax/FreePDK45_10m_Cmin.tlup_-40.gng.spef
+source ../../../syn/cons/cons.tcl
+#@ # -- Starting source ../../../syn/cons/cons.tcl
+
+#@ create_clock -name clk -period 4 -waveform {0 2} [get_ports clk]
+#@ set_input_delay -max 2 -clock [get_clocks clk] [remove_from_collection [all_inputs] [get_ports clk]]
+#@ set_output_delay -max 2 -clock [get_clocks clk] [all_outputs]
+#@ set_clock_uncertainty 0.35 [get_clocks]
+#@ set_false_path -hold -from [remove_from_collection [all_inputs] [get_ports clk]]
+#@ set_false_path -hold -to [all_outputs]
+#@ 
+#@ # -- End source ../../../syn/cons/cons.tcl
+
+read_parasitics ../../rcxt/cmin/FreePDK45_10m_Cmin.tlup_-40.gng.spef
+update_timing
+save_session gng_min.session
+report_timing -delay_type min
+report_constraint -all_violators -significant_digits 4
+source ../../../syn/cons/cons.tcl
+#@ # -- Starting source ../../../syn/cons/cons.tcl
+
+#@ create_clock -name clk -period 3.5 -waveform {0 1.75} [get_ports clk]
+#@ set_input_delay -max 2 -clock [get_clocks clk] [remove_from_collection [all_inputs] [get_ports clk]]
+#@ set_output_delay -max 2 -clock [get_clocks clk] [all_outputs]
+#@ set_clock_uncertainty 0.35 [get_clocks]
+#@ set_false_path -hold -from [remove_from_collection [all_inputs] [get_ports clk]]
+#@ set_false_path -hold -to [all_outputs]
+#@ 
+#@ # -- End source ../../../syn/cons/cons.tcl
+
+report_timing -delay_type min
+read_parasitics ../../rcxt/cmin/FreePDK45_10m_Cmin.tlup_-40.gng.spef
+update_timing
+report_timing -delay_type min
+report_timing -delay_type max
+source ../../../syn/cons/cons.tcl
+#@ # -- Starting source ../../../syn/cons/cons.tcl
+
+#@ create_clock -name clk -period 3 -waveform {0 1.75} [get_ports clk]
+#@ set_input_delay -max 2 -clock [get_clocks clk] [remove_from_collection [all_inputs] [get_ports clk]]
+#@ set_output_delay -max 2 -clock [get_clocks clk] [all_outputs]
+#@ set_clock_uncertainty 0.35 [get_clocks]
+#@ set_false_path -hold -from [remove_from_collection [all_inputs] [get_ports clk]]
+#@ set_false_path -hold -to [all_outputs]
+#@ 
+#@ # -- End source ../../../syn/cons/cons.tcl
+
+update_timing
+report_timing -delay_type min
+report_timing -delay_type max
+report_timing -delay_type max
+report_timing -delay_type min
+update_timing
+report_timing -delay_type min
+report_timing -delay_type max
+source ../../../syn/cons/cons.tcl
+#@ # -- Starting source ../../../syn/cons/cons.tcl
+
+#@ create_clock -name clk -period 3 -waveform {0 1.5} [get_ports clk]
+#@ set_input_delay -max 2 -clock [get_clocks clk] [remove_from_collection [all_inputs] [get_ports clk]]
+#@ set_output_delay -max 2 -clock [get_clocks clk] [all_outputs]
+#@ set_clock_uncertainty 0.35 [get_clocks]
+#@ set_false_path -hold -from [remove_from_collection [all_inputs] [get_ports clk]]
+#@ set_false_path -hold -to [all_outputs]
+#@ 
+#@ # -- End source ../../../syn/cons/cons.tcl
+
+update_timing
+report_timing -delay_type max
+report_timing -delay_type min
+inser_buffer u_gng_ctg/z1_reg_4_/CK (DFF_X1) CLKBUF_X1
+insert_buffer u_gng_ctg/z1_reg_4_/CK (DFF_X1) CLKBUF_X1
+insert_buffer u_gng_ctg/z1_reg_4_/CK CLKBUF_X1
+report_timing -delay_type min
+update_timing
+report_timing -delay_type min
+insert_buffer u_gng_ctg/z1_reg_4_/Q CLKBUF_X1
+update_timing
+report_timing -delay_type min
+insert_buffer u_gng_ctg/z1_reg_16_/Q CLKBUF_X1
+update_timing
+report_timing -delay_type min
+report_timing -delay_type min -nworst 40
+report_timing -delay_type min -nworst 10
+fix_eco_timing
+man fix_eco_timing
+man fix_eco_timing -type hold
+fix_eco_timing -type hold
+man PTECO-013
+help
+fix_eco_timing -type hold
+man fix_eco_timing
+report_timing -delay_type min -nworst 10
+fix_eco_timing -type hold -buffer_list {BUF_X1 BUF_X2}
+report_timing -delay_type min
+report_timing -delay_type max
+source ../../../syn/cons/cons.tcl
+#@ # -- Starting source ../../../syn/cons/cons.tcl
+
+#@ create_clock -name clk -period 3.5 -waveform {0 1.75} [get_ports clk]
+#@ set_input_delay -max 2 -clock [get_clocks clk] [remove_from_collection [all_inputs] [get_ports clk]]
+#@ set_output_delay -max 2 -clock [get_clocks clk] [all_outputs]
+#@ set_clock_uncertainty 0.35 [get_clocks]
+#@ set_false_path -hold -from [remove_from_collection [all_inputs] [get_ports clk]]
+#@ set_false_path -hold -to [all_outputs]
+#@ 
+#@ # -- End source ../../../syn/cons/cons.tcl
+
+update_timing
+report_timing -delay_type max
+report_timing -delay_type min
+report_timing -delay_type min -nworst 10
+report_timing -delay_type min
+report_timing -delay_type max -nworst 3 -significant_digits 4
+report_timing -delay_type min -nworst 3 -significant_digits 4
+report_timing -delay_type max -nworst 3 -significant_digits 4
+report_timing -delay_type max
+report_timing -delay_type min
+write_changes -format -icc -output eco_final.tcl
+write_changes -format icc -output eco_final.tcl
+ls
+exit

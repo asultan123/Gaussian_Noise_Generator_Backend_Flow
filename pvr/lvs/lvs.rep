@@ -1,0 +1,240 @@
+
+
+
+                  ##################################################
+                  ##                                              ##
+                  ##         C A L I B R E    S Y S T E M         ##
+                  ##                                              ##
+                  ##             L V S   R E P O R T              ##
+                  ##                                              ##
+                  ##################################################
+
+
+
+REPORT FILE NAME:         lvs.rep
+LAYOUT NAME:              /home/mohamed/Desktop/ref_flow/pnr/grg_tapout_swapped.gds
+SOURCE NAME:              ./spice/gng.sp ('gng')
+RULE FILE:                calibreLVS.rul
+RULE FILE TITLE:          LVS Rule File for FreePDK45
+LVS MODE:                 Mask
+RULE FILE NAME:           calibreLVS.rul
+CREATION TIME:            Sat Apr 21 16:00:59 2018
+CURRENT DIRECTORY:        /home/mohamed/Desktop/ref_flow/pvr/lvs
+USER NAME:                mohamed
+CALIBRE VERSION:          v2011.2_34.26    Wed Jul 6 05:20:56 PDT 2011
+
+
+**************************************************************************************************************
+                               OVERALL COMPARISON RESULTS
+**************************************************************************************************************
+
+
+                 #   #         ########################  
+                  # #          #                      #  
+                   #           #     NOT COMPARED     #  
+                  # #          #                      #  
+                 #   #         ########################  
+
+
+  Error:    Different numbers of ports (see below).
+  Error:    Power net missing in layout. Ground net missing in layout.
+
+--------------------------------------------------------------------------------------------------------------
+
+INITIAL NUMBERS OF OBJECTS
+--------------------------
+
+                Layout    Source         Component Type
+                ------    ------         --------------
+ Ports:             20        22    *
+
+ Nets:           39031     38760    *
+
+ Instances:      78240     78240         mn (4 pins)
+                 78240     78240         mp (4 pins)
+                ------    ------
+ Total Inst:    156480    156480
+
+
+NUMBERS OF OBJECTS AFTER TRANSFORMATION
+---------------------------------------
+
+                Layout    Source         Component Type
+                ------    ------         --------------
+ Ports:             20        22    *
+
+ Nets:           19418     19191    *
+
+ Instances:      15505         6    *    mn (4 pins)
+                 14602         5    *    mp (4 pins)
+                     0     13193    *    INV (2 pins)
+                     0       506    *    NAND2 (3 pins)
+                     0        10    *    NAND3 (4 pins)
+                     0         8    *    NAND4 (5 pins)
+                     0       965    *    NOR2 (3 pins)
+                     0        20    *    NOR3 (4 pins)
+                     0        16    *    NOR4 (5 pins)
+                     0       247    *    AOI_2_1 (4 pins)
+                     0        10    *    AOI_2_2 (5 pins)
+                     0         5    *    AOI_2_2_1 (6 pins)
+                     0         1    *    AOI_2_2_2 (7 pins)
+                     0       212    *    OAI_2_1 (4 pins)
+                     0         5    *    OAI_2_1_1 (5 pins)
+                     0       103    *    OAI_2_2 (5 pins)
+                     0       108    *    OAI_2_2_1 (6 pins)
+                     0         1    *    OAI_2_2_2 (7 pins)
+                     0      5932    *    SDW2 (3 pins)
+                     0       533    *    SDW3 (4 pins)
+                     0      5933    *    SUP2 (3 pins)
+                     0       533    *    SUP3 (4 pins)
+                     0       533    *    SPDW_2_1 (4 pins)
+                     0       533    *    SPDW_3_1 (5 pins)
+                     0       533    *    SPUP_2_1 (4 pins)
+                     0       533    *    SPUP_3_1 (5 pins)
+                  6738         0    *    SMN2 (4 pins)
+                   543         0    *    SMN3 (5 pins)
+                     8         0    *    SMN4 (6 pins)
+                  7560         0    *    SMP2 (4 pins)
+                   553         0    *    SMP3 (5 pins)
+                    16         0    *    SMP4 (6 pins)
+                   745         0    *    SPMN_2_1 (5 pins)
+                     5         0    *    SPMN_2_1_1 (6 pins)
+                   103         0    *    SPMN_2_2 (6 pins)
+                   108         0    *    SPMN_2_2_1 (7 pins)
+                     1         0    *    SPMN_2_2_2 (8 pins)
+                   533         0    *    SPMN_3_1 (6 pins)
+                   780         0    *    SPMP_2_1 (5 pins)
+                    10         0    *    SPMP_2_2 (6 pins)
+                     5         0    *    SPMP_2_2_1 (7 pins)
+                     1         0    *    SPMP_2_2_2 (8 pins)
+                   533         0    *    SPMP_3_1 (6 pins)
+                ------    ------
+ Total Inst:     48349     30484
+
+
+       * = Number of objects in layout different from number in source.
+
+
+
+**************************************************************************************************************
+                                      LVS PARAMETERS
+**************************************************************************************************************
+
+
+o LVS Setup:
+
+   LVS COMPONENT TYPE PROPERTY            element
+   LVS COMPONENT SUBTYPE PROPERTY         model
+   // LVS PIN NAME PROPERTY
+   LVS POWER NAME                         "VDD"
+   LVS GROUND NAME                        "VSS" "GROUND"
+   LVS CELL SUPPLY                        NO
+   LVS RECOGNIZE GATES                    ALL
+   LVS IGNORE PORTS                       NO
+   LVS CHECK PORT NAMES                   NO
+   LVS IGNORE TRIVIAL NAMED PORTS         NO
+   LVS BUILTIN DEVICE PIN SWAP            YES
+   LVS ALL CAPACITOR PINS SWAPPABLE       NO
+   LVS DISCARD PINS BY DEVICE             NO
+   LVS SOFT SUBSTRATE PINS                NO
+   LVS INJECT LOGIC                       YES
+   LVS EXPAND UNBALANCED CELLS            YES
+   LVS FLATTEN INSIDE CELL                NO
+   LVS EXPAND SEED PROMOTIONS             NO
+   LVS PRESERVE PARAMETERIZED CELLS       NO
+   LVS GLOBALS ARE PORTS                  YES
+   LVS REVERSE WL                         NO
+   LVS SPICE PREFER PINS                  NO
+   LVS SPICE SLASH IS SPACE               YES
+   LVS SPICE ALLOW FLOATING PINS          YES
+   // LVS SPICE ALLOW INLINE PARAMETERS     
+   LVS SPICE ALLOW UNQUOTED STRINGS       NO
+   LVS SPICE CONDITIONAL LDD              NO
+   LVS SPICE CULL PRIMITIVE SUBCIRCUITS   NO
+   LVS SPICE IMPLIED MOS AREA             NO
+   // LVS SPICE MULTIPLIER NAME
+   LVS SPICE OVERRIDE GLOBALS             NO
+   LVS SPICE REDEFINE PARAM               NO
+   LVS SPICE REPLICATE DEVICES            NO
+   LVS SPICE SCALE X PARAMETERS           NO
+   LVS SPICE STRICT WL                    NO
+   // LVS SPICE OPTION
+   LVS STRICT SUBTYPES                    NO
+   LVS EXACT SUBTYPES                     NO
+   LAYOUT CASE                            NO
+   SOURCE CASE                            NO
+   LVS COMPARE CASE                       NO
+   LVS DOWNCASE DEVICE                    NO
+   LVS REPORT MAXIMUM                     1000
+   LVS PROPERTY RESOLUTION MAXIMUM        32
+   // LVS SIGNATURE MAXIMUM
+   // LVS FILTER UNUSED OPTION
+   LVS REPORT OPTION                      N
+   LVS REPORT UNITS                       YES
+   // LVS NON USER NAME PORT
+   // LVS NON USER NAME NET
+   // LVS NON USER NAME INSTANCE
+
+   // Reduction
+
+   LVS REDUCE SERIES MOS                  YES
+   LVS REDUCE PARALLEL MOS                YES
+   LVS REDUCE SEMI SERIES MOS             YES
+   LVS REDUCE SPLIT GATES                 YES
+   LVS REDUCE PARALLEL BIPOLAR            YES
+   LVS REDUCE SERIES CAPACITORS           YES
+   LVS REDUCE PARALLEL CAPACITORS         YES
+   LVS REDUCE SERIES RESISTORS            YES
+   LVS REDUCE PARALLEL RESISTORS          YES
+   LVS REDUCE PARALLEL DIODES             YES
+   LVS REDUCTION PRIORITY                 PARALLEL
+   
+   LVS SHORT EQUIVALENT NODES             NO
+
+   // Trace Property
+
+   TRACE PROPERTY  mn(nmos_vtl)  l l 4e-09 ABSOLUTE
+   TRACE PROPERTY  mn(nmos_vtl)  w w 4e-09 ABSOLUTE
+   TRACE PROPERTY  mp(pmos_vtl)  l l 4e-09 ABSOLUTE
+   TRACE PROPERTY  mp(pmos_vtl)  w w 4e-09 ABSOLUTE
+   TRACE PROPERTY  mn(nmos_vth)  l l 4e-09 ABSOLUTE
+   TRACE PROPERTY  mn(nmos_vth)  w w 4e-09 ABSOLUTE
+   TRACE PROPERTY  mp(pmos_vth)  l l 4e-09 ABSOLUTE
+   TRACE PROPERTY  mp(pmos_vth)  w w 4e-09 ABSOLUTE
+   TRACE PROPERTY  mn(nmos_vtg)  l l 4e-09 ABSOLUTE
+   TRACE PROPERTY  mn(nmos_vtg)  w w 4e-09 ABSOLUTE
+   TRACE PROPERTY  mp(pmos_vtg)  l l 4e-09 ABSOLUTE
+   TRACE PROPERTY  mp(pmos_vtg)  w w 4e-09 ABSOLUTE
+   TRACE PROPERTY  mn(nmos_thkox)  l l 4e-09 ABSOLUTE
+   TRACE PROPERTY  mn(nmos_thkox)  w w 4e-09 ABSOLUTE
+   TRACE PROPERTY  mp(pmos_thkox)  l l 4e-09 ABSOLUTE
+   TRACE PROPERTY  mp(pmos_thkox)  w w 4e-09 ABSOLUTE
+
+
+
+**************************************************************************************************************
+                               INFORMATION AND WARNINGS
+**************************************************************************************************************
+
+
+o Statistics:
+
+   44 isolated layout nets were deleted.
+
+   87670 layout mos transistors were reduced to 3165.  63 connecting nets were deleted.
+     84380 mos transistors were deleted by parallel reduction.
+     1 mos transistor was deleted by semi-series reduction.
+     124 mos transistors and 63 connecting nets were deleted by split-gate reduction.
+   87670 source mos transistors were reduced to 3085.  103 connecting nets were deleted.
+     84480 mos transistors were deleted by parallel reduction.
+     100 mos transistors and 100 connecting nets were deleted by series reduction.
+     1 mos transistor was deleted by semi-series reduction.
+     4 mos transistors and 3 connecting nets were deleted by split-gate reduction.
+
+
+**************************************************************************************************************
+                                         SUMMARY
+**************************************************************************************************************
+
+Total CPU Time:      13 sec
+Total Elapsed Time:  23 sec

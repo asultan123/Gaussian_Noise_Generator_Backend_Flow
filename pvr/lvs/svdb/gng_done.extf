@@ -1,0 +1,5 @@
+# Automagically generated file: Please do not edit!
+lvs_ExtfVersion 1
+lvs_ExtOutFile RUNDIR /home/mohamed/Desktop/ref_flow/pvr/lvs
+lvs_ExtOutFile RULES_FILE calibreLVS.rul
+lvs_ExtRunTimes 1524351637 1524351656

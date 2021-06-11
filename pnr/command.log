@@ -1,0 +1,178 @@
+#@ # 
+#@ # Running icc_shell Version H-2013.03-ICC for linux -- Mar 05, 2013
+#@ # Date:   Sat Apr 21 13:38:39 2018
+#@ # Run by: mohamed@localhost.localdomain
+#@ 
+
+"[source /home/mohamed/Desktop/ref_flow/pnr/route_route_zrt_global_16937.tcl]"
+#@ # -- Starting source /home/mohamed/Desktop/ref_flow/pnr/route_route_zrt_global_16937.tcl
+
+#@ set SNPS_ROUTE_AS_CHILD_START_TIME [clock seconds]
+#@ set phys_hier_attr_mode DC_ATTR
+#@ set_message_info -id ZRT-312 -limit 0
+#@ set_message_info -id CMD-010 -limit 0
+#@ set_message_info -id LINT-22 -limit 0
+#@ set_message_info -id LINT-63 -limit 0
+#@ set_message_info -id FPHSM-0010 -limit 0
+#@ set_message_info -id LINT-25 -limit 0
+#@ set_message_info -id CMD-012 -limit 0
+#@ set_message_info -id TIM-113 -limit 0
+#@ set_message_info -id GUI-026 -limit 0
+#@ set_message_info -id TIM-112 -limit 0
+#@ set_message_info -id RCEX-202 -limit 0
+#@ set_message_info -id RCEX-013 -limit 0
+#@ set_message_info -id UID-95 -limit 0
+#@ set_message_info -id RCEX-203 -limit 0
+#@ set_message_info -id MWUI-031 -limit 0
+#@ set_message_info -id RCEX-011 -limit 0
+#@ set_message_info -id PNA-138 -limit 0
+#@ set_message_info -id PSYN-523 -limit 0
+#@ set_message_info -id MCMM-231 -limit 0
+#@ set_message_info -id OBS-004 -limit 0
+#@ set_message_info -id PSYN-605 -limit 0
+#@ set_message_info -id RCEX-015 -limit 0
+#@ set_message_info -id TIM-222 -limit 0
+#@ set_message_info -id MWDC-285 -limit 0
+#@ set_message_info -id TIM-223 -limit 0
+#@ set_message_info -id RCEX-019 -limit 0
+#@ set_message_info -id CMD-025 -limit 0
+#@ set_message_info -id TIM-226 -limit 0
+#@ set_message_info -id UID-401 -limit 0
+#@ set_message_info -id DPI-029 -limit 0
+#@ set_message_info -id PSYN-1111 -limit 0
+#@ set_message_info -id PSYN-1099 -limit 0
+#@ set_message_info -id CTS-287 -limit 0
+#@ set_message_info -id PSYN-864 -limit 0
+#@ set_message_info -id TIM-219 -limit 0
+#@ set_message_info -id CTS-376 -limit 0
+#@ set_message_info -id ZRT-444 -limit 0
+#@ set_message_info -id IFS-007 -limit 0
+#@ set_message_info -id CTS-375 -limit 0
+#@ set_message_info -id MCMM-225 -limit 0
+#@ set_message_info -id SEL-003 -limit 0
+#@ set_message_info -id RCEX-023 -limit 0
+#@ set_message_info -id UID-85 -limit 0
+#@ set_message_info -id ROPT-032 -limit 0
+#@ set_message_info -id MWDC-290 -limit 0
+#@ set_message_info -id RCEX-060 -limit 0
+#@ set_message_info -id CTS-202 -limit 0
+#@ set_message_info -id UID-83 -limit 0
+#@ set_message_info -id SEL-004 -limit 0
+#@ set_message_info -id PSYN-100 -limit 0
+#@ set_message_info -id MWDC-217 -limit 0
+#@ set_message_info -id HFS-802 -limit 0
+#@ set_message_info -id PSYN-101 -limit 0
+#@ set_message_info -id PWR-809 -limit 0
+#@ set_message_info -id PNA-025 -limit 0
+#@ set_message_info -id FEAS-100 -limit 0
+#@ set_message_info -id CTS-379 -limit 0
+#@ set_message_info -id FPHSM-1800 -limit 0
+#@ set_message_info -id FEAS-101 -limit 0
+#@ set_message_info -id MWDC-119 -limit 0
+#@ set_message_info -id PSYN-878 -limit 0
+#@ set_message_info -id PNA-116 -limit 0
+#@ set_message_info -id MWDC-118 -limit 0
+#@ set_message_info -id TFCHK-049 -limit 0
+#@ set_message_info -id CMD-036 -limit 0
+#@ set_message_info -id PNR-165 -limit 0
+#@ set_message_info -id VFP-425 -limit 0
+#@ set_message_info -id PNA-111 -limit 0
+#@ set_message_info -id PNA-060 -limit 0
+#@ set_message_info -id ROPT-028 -limit 0
+#@ set_message_info -id PNR-164 -limit 0
+#@ set_message_info -id TM-002 -limit 0
+#@ set_message_info -id ZRT-103 -limit 0
+#@ set_message_info -id PSYN-877 -limit 0
+#@ set_message_info -id MW-348 -limit 0
+#@ set_message_info -id MW-349 -limit 0
+#@ set_message_info -id RCEX-141 -limit 0
+#@ set_message_info -id PNA-069 -limit 0
+#@ set_message_info -id ROPT-021 -limit 0
+#@ set_message_info -id CTS-152 -limit 0
+#@ set_message_info -id PNA-199 -limit 0
+#@ set_message_info -id ROPT-020 -limit 0
+#@ set_message_info -id OPT-100 -limit 0
+#@ set_message_info -id UIG-5 -limit 0
+#@ set_message_info -id TFCHK-084 -limit 0
+#@ set_message_info -id PSYN-503 -limit 0
+#@ set_message_info -id APLUI-004 -limit 0
+#@ set_message_info -id PSYN-476 -limit 0
+#@ set_message_info -id PNA-017 -limit 0
+#@ set_message_info -id PSYN-003 -limit 0
+#@ set_message_info -id CMD-005 -limit 0
+#@ set_message_info -id RCEX-039 -limit 0
+#@ set_message_info -id LINT-5 -limit 0
+#@ set_message_info -id UID-1008 -limit 0
+#@ set_message_info -id LINT-6 -limit 0
+#@ set_message_info -id CMD-007 -limit 0
+#@ set_message_info -id ZRT-305 -limit 0
+#@ set_message_info -id CTS-1121 -limit 0
+#@ set_message_info -id UID-1006 -limit 0
+#@ set_message_info -id LINT-33 -limit 0
+#@ set_message_info -id LINT-1 -limit 0
+#@ set_message_info -id LINT-32 -limit 0
+#@ set_message_info -id LINT-2 -limit 0
+#@ set_message_info -id LINT-3 -limit 0
+#@ set_message_info -id ZRT-516 -limit 0
+#@ set_message_info -id PWR-824 -limit 0
+#@ set_message_info -id VFP-432 -limit 0
+#@ set_message_info -id ZRT-026 -limit 0
+#@ set_message_info -id TFCHK-073 -limit 0
+#@ set_message_info -id UID-1000 -limit 0
+#@ set_message_info -id TIM-180 -limit 0
+#@ set_message_info -id RCEX-043 -limit 0
+#@ set_message_info -id RCEX-081 -limit 0
+#@ set_message_info -id PNA-099 -limit 0
+#@ set_message_info -id RCEX-041 -limit 0
+#@ set_message_info -id RT-066 -limit 0
+#@ set_message_info -id PNA-019 -limit 0
+#@ set_message_info -id CTS-103 -limit 0
+#@ set_message_info -id RCEX-040 -limit 0
+#@ set_message_info -id LINT-8 -limit 0
+#@ set_message_info -id RCEX-047 -limit 0
+#@ set_message_info -id RT-064 -limit 0
+#@ set_message_info -id RCEX-007 -limit 0
+#@ set_message_info -id FPHSM-1829 -limit 0
+#@ set_message_info -id PSYN-260 -limit 0
+#@ set_message_info -id LINT-28 -limit 0
+#@ set_message_info -id RT-062 -limit 0
+#@ set_message_info -id PSYN-054 -limit 0
+#@ set_message_info -id PSYN-261 -limit 0
+#@ set_message_info -id RCEX-044 -limit 0
+#@ set_message_info -id PNA-006 -limit 0
+#@ set_message_info -id DPI-030 -limit 0
+#@ set_message_info -id TIM-233 -limit 0
+#@ set_message_info -id RCEX-008 -limit 0
+#@ set_message_info -id MWUI-068 -limit 0
+#@ set_message_info -id LINT-60 -limit 0
+#@ set_message_info -id LINT-62 -limit 0
+#@ set search_path "/home/standard_cell_libraries/NangateOpenCellLibrary_PDKv1_3_v2010_12/lib/Front_End/Liberty/NLDM"
+#@ set physical_library ""
+#@ set target_library "NangateOpenCellLibrary_ss0p95vn40c.db"
+#@ set link_library "* NangateOpenCellLibrary_ss0p95vn40c.db"
+#@ set mw_reference_library ""
+#@ set enable_set_units FALSE 
+#@ open_mw_lib /home/mohamed/Desktop/ref_flow/pnr/gng
+#@ open_working_copy_mw_cel gng_3_power -version 1
+#@ set_separate_process_options -routing false
+#@ set routeopt_xtalk_reduction_tns true
+#@ set_route_zrt_common_options -dbin_list_of_nets {}
+#@ set_route_zrt_common_options -extraction_mode parallel
+#@ set_route_zrt_global_options -crosstalk_driven true
+#@ set_route_zrt_track_options -crosstalk_driven true
+#@ set neco_file_name /tmp/neco_eM5aXD
+#@ set zrt_max_parallel_computations 1
+#@ route_zrt_global  -place_mode true
+#@ pass_working_copy_mw_cel_back
+#@ set SNPS_ROUTE_AS_CHILD_END_TIME [clock seconds]
+#@ set SNPS_CPUTIME [cputime -self -child]
+#@ set SNPS_ELAPSED_TIME [expr $SNPS_ROUTE_AS_CHILD_END_TIME - $SNPS_ROUTE_AS_CHILD_START_TIME]
+#@ set SNPS_CPUTIME_hr [expr $SNPS_CPUTIME/3600.0]
+#@ set SNPS_ELAPSED_TIME_hr [expr $SNPS_ELAPSED_TIME/3600.0]
+#@ set SNPS_MEMORY_Mb [expr [mem]/1024]
+#@ set SNPS_CPU_MEM_LOG_FORMAT "%-30s CPU: %6d s (%5.2f hr) ELAPSE: %6d s (%5.2f hr) MEM-PEAK: %5lu Mb "
+#@ set SNPS_CPU_MEM_LOG_OUT [format $SNPS_CPU_MEM_LOG_FORMAT "CHILD_PROC: Router" $SNPS_CPUTIME $SNPS_CPUTIME_hr $SNPS_ELAPSED_TIME $SNPS_ELAPSED_TIME_hr $SNPS_MEMORY_Mb ]
+#@ set fileId [open proc_end_16937 w 0600]
+#@ puts $fileId "/home/mohamed/Desktop/ref_flow/pnr/route_route_zrt_global_16937.tcl $SNPS_CPU_MEM_LOG_OUT"
+#@ close $fileId
+#@ quit

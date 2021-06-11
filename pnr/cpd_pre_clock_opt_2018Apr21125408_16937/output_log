@@ -1,0 +1,316 @@
+Start CPD check: ::check_tlu_plus_files 
+
+Sanity check for TLU+ vs MW-Tech files:
+ mapping_file: /home/standard_cell_libraries/NangateOpenCellLibrary_PDKv1_3_v2010_12/tech/rcxt/FreePDK45_10m.map
+ number of unique tlu+ files in mcmm mode: 2
+  /home/standard_cell_libraries/NangateOpenCellLibrary_PDKv1_3_v2010_12/tech/rcxt/FreePDK45_10m_Cmax.tlup
+  /home/standard_cell_libraries/NangateOpenCellLibrary_PDKv1_3_v2010_12/tech/rcxt/FreePDK45_10m_Cmin.tlup
+
+--------- Sanity Check on TLUPlus Files -------------
+1. Checking the conducting layer names in ITF and mapping file ... 
+[ Passed! ]
+2. Checking the via layer names in ITF and mapping file ... 
+[ Passed! ]
+3. Checking the consistency of Min Width and Min Spacing between MW-tech and ITF ... 
+[ Passed! ]
+----------------- Check Ends ------------------
+1
+End CPD check: ::check_tlu_plus_files
+Start CPD check: ::get_placement_area 
+13.100 13.100 217.540 217.500
+End CPD check: ::get_placement_area
+Start CPD check: report_routing_metal_info 
+Ignored layers in congestion analysis and RC estimation: metal6 metal7 metal8 metal9 metal10 
+
+Min_routing_layer: metal1
+Max_routing_layer: metal5
+Information: Report design vs library layers and preferred routing directions. (PNR-164)
+ 
+****************************************
+Report : Layers
+Design : gng
+Version: H-2013.03-ICC
+Date   : Sat Apr 21 12:54:08 2018
+****************************************
+
+Layer Name                   Library             Design              Tool understands
+metal1                       Horizontal          Horizontal          Horizontal
+metal2                       Vertical            Vertical            Vertical
+metal3                       Horizontal          Horizontal          Horizontal
+metal4                       Vertical            Vertical            Vertical
+metal5                       Horizontal          Horizontal          Horizontal
+metal6                       Vertical            Vertical            Vertical
+metal7                       Horizontal          Horizontal          Horizontal
+metal8                       Vertical            Vertical            Vertical
+metal9                       Horizontal          Horizontal          Horizontal
+metal10                      Vertical            Vertical            Vertical
+
+Information: Report track info.  (PNR-165)
+****************************************
+Report track
+Design : gng
+Version: H-2013.03-ICC
+Date   : Sat Apr 21 12:54:08 2018
+****************************************
+Layer          Direction     Start         Tracks    Pitch          Attr
+------------------------------------------------------------------------
+Attributes :
+         usr : User defined
+         def : DEF defined
+
+metal1             Y         0.0800         1647      0.1400          
+metal2             Y         0.0800         1647      0.1400          
+metal2             X         0.1800         1213      0.1900          
+metal1             X         0.1800         1213      0.1900          
+metal3             X         0.1800         1213      0.1900          
+metal3             Y         0.5600         605       0.3800          
+metal2             Y         0.5600         605       0.3800          
+metal4             Y         0.5600         605       0.3800          
+metal4             X         0.3700         606       0.3800          
+metal3             X         0.3700         606       0.3800          
+metal5             X         0.3700         606       0.3800          
+metal5             Y         0.9400         302       0.7600          
+metal4             Y         0.9400         302       0.7600          
+metal6             Y         0.9400         302       0.7600          
+metal6             X         0.5600         303       0.7600          
+metal5             X         0.5600         303       0.7600          
+metal7             X         0.5600         303       0.7600          
+metal7             Y         0.9400         151       1.5200          
+metal6             Y         0.9400         151       1.5200          
+metal8             Y         0.9400         151       1.5200          
+metal8             X         1.7000         151       1.5200          
+metal7             X         1.7000         151       1.5200          
+metal9             X         1.7000         151       1.5200          
+metal9             Y         3.9800         75        3.0400          
+metal8             Y         3.9800         75        3.0400          
+metal10            Y         3.9800         75        3.0400          
+metal10            X         2.4600         75        3.0400          
+metal9             X         2.4600         75        3.0400          
+1
+End CPD check: report_routing_metal_info
+Start CPD check: check_track_and_unit 
+
+End CPD check: check_track_and_unit
+Start CPD check: check_layer_direction 
+
+End CPD check: check_layer_direction
+Start CPD check: check_physical_only_ports 
+Warning: No port objects matched '*' (SEL-004)
+[]
+End CPD check: check_physical_only_ports
+Start CPD check: ::check_database 
+************************************************************
+CHECK_DATABASE RESULTS FOR CELL : gng_3_power.CEL
+************************************************************
+MWUHIER: Checking for hierarchical internal netlist and flat internal netlist consistency ... 
+MWUHIER: Done with checking hierarchical internal netlist and flat internal netlist consistency. 
+Information: MWUHIER: Number of errors = 0 (MW-348)
+End PG consistent checking.. PG_Pass
+Information: Performing CEL netlist consistency check. (MWDC-118)
+Information: CEL consistency check PASSED. (MWDC-119)
+
+Start UPF checking.
+No UPF infomation. Finish UPF checking.
+1
+End CPD check: ::check_database
+Start CPD check: report_taint -dump_errors 
+1
+End CPD check: report_taint -dump_errors
+Start CPD check: check_for_HFN_ideal 
+
+End CPD check: check_for_HFN_ideal
+Start CPD check: check_for_dont_touch_net_with_drc_violation 
+
+End CPD check: check_for_dont_touch_net_with_drc_violation
+Start CPD check: check_ilm -stage pre_clock_opt 
+Information: No ILMs found
+1
+End CPD check: check_ilm -stage pre_clock_opt
+Start CPD check: check_block_abstraction -stage pre_clock_opt 
+Information: No blocks with abstraction information found
+1
+End CPD check: check_block_abstraction -stage pre_clock_opt
+Start CPD check: check_mv_design -opcond_mismatches 
+
+--------------------------------------------------------------------------------
+                 Design And Library Operating Condition Checks
+--------------------------------------------------------------------------------
+No Errors/Warnings Found.
+
+--------------------------------------------------------------------------------
+                        Cell Operating Condition Checks
+--------------------------------------------------------------------------------
+No Errors/Warnings Found.
+
+--------------------------------------------------------------------------------
+           Power Domain and Operating Condition Consistency Checks
+--------------------------------------------------------------------------------
+No Errors/Warnings Found.
+
+Please review report above for warnings and errors.
+1
+End CPD check: check_mv_design -opcond_mismatches
+Start CPD check: check_scenarios -output /home/mohamed/Desktop/ref_flow/pnr//cpd_pre_clock_opt_2018Apr21125408_16937/check_scenarios 
+Information: Timing data is not loaded for design (gng), skip check for design complexity
+Report summary:
+Information: TLU+ file (pw: /home/standard_cell_libraries/NangateOpenCellLibrary_PDKv1_3_v2010_12/tech/rcxt/FreePDK45_10m_Cmax.tlup) is under location different from design location.  (MCMM-231)
+Information: TLU+ file (pw: /home/standard_cell_libraries/NangateOpenCellLibrary_PDKv1_3_v2010_12/tech/rcxt/FreePDK45_10m_Cmin.tlup) is under location different from design location.  (MCMM-231)
+Information: TLU+ file (pw: /home/standard_cell_libraries/NangateOpenCellLibrary_PDKv1_3_v2010_12/tech/rcxt/FreePDK45_10m.map) is under location different from design location.  (MCMM-231)
+Warning: Design (gng) has instances that refer to library cells that are marked with the dont_use attribute.  (MCMM-225)
+Information: HTML report can be found at /home/mohamed/Desktop/ref_flow/pnr//cpd_pre_clock_opt_2018Apr21125408_16937/check_scenarios/check_scenarios.html
+1
+End CPD check: check_scenarios -output /home/mohamed/Desktop/ref_flow/pnr//cpd_pre_clock_opt_2018Apr21125408_16937/check_scenarios
+Start CPD check: check_placement_utilization_violation 
+ 
+****************************************
+  Report : Chip Summary
+  Design : gng
+  Version: H-2013.03-ICC
+  Date   : Sat Apr 21 12:54:08 2018
+****************************************
+Std cell utilization: 24.43%  (38386/(157096-0))
+(Non-fixed + Fixed)
+Std cell utilization: 24.43%  (38386/(157096-0))
+(Non-fixed only)
+Chip area:            157096   sites, bbox (13.10 13.10 217.54 217.50) um
+Std cell area:        38386    sites, (non-fixed:38386  fixed:0)
+                      4826     cells, (non-fixed:4826   fixed:0)
+Macro cell area:      0        sites
+                      0        cells
+Placement blockages:  0        sites, (excluding fixed std cells)
+                      0        sites, (include fixed std cells & chimney area)
+                      0        sites, (complete p/g net blockages)
+Routing blockages:    0        sites, (partial p/g net blockages)
+                      0        sites, (routing blockages and signal pre-route)
+Lib cell count:       36 
+Avg. std cell width:  1.16 um 
+Site array:           unit     (width: 0.19 um, height: 1.40 um, rows: 146)
+Physical DB scale:    10000 db_unit = 1 um 
+
+ 
+****************************************
+  Report : pnet options
+  Design : gng
+  Version: H-2013.03-ICC
+  Date   : Sat Apr 21 12:54:08 2018
+****************************************
+
+
+--------------------------------------------------------------------
+Layer      Blockage   Min_width   Min_height   Via_additive     Density
+--------------------------------------------------------------------
+metal1     none          ---         ---       via additive      ---
+metal2     none          ---         ---       via additive      ---
+metal3     none          ---         ---       via additive      ---
+metal4     none          ---         ---       via additive      ---
+metal5     none          ---         ---       via additive      ---
+metal6     none          ---         ---       via additive      ---
+metal7     none          ---         ---       via additive      ---
+metal8     none          ---         ---       via additive      ---
+metal9     none          ---         ---       via additive      ---
+metal10    none          ---         ---       via additive      ---
+
+**********************************
+      Sub-Region Utilization      
+**********************************
+Number of regions with placement utilization 0 - 0.125 is 24 (2.67%)
+Number of regions with placement utilization 0.125 - 0.25 is 501 (55.67%)
+Number of regions with placement utilization 0.25 - 0.375 is 368 (40.89%)
+Number of regions with placement utilization 0.375 - 0.5 is 7 (0.78%)
+Number of regions with placement utilization 0.5 - 0.625 is 0 (0.00%)
+Number of regions with placement utilization 0.625 - 0.75 is 0 (0.00%)
+Number of regions with placement utilization 0.75 - 0.875 is 0 (0.00%)
+Number of regions with placement utilization 0.875 - 1 is 0 (0.00%)
+1
+
+1
+End CPD check: check_placement_utilization_violation
+Start CPD check: check_legality_violation 
+
+  Loading design 'gng'
+
+
+[begin initializing data for legality checker]
+Initializing Data Structure ...
+  Reading technology information ...
+    Technology table contains 10 routable metal layers
+    Top most routable layer is set to be metal5
+    This is considered as a 5-metal-layer design
+    Reading library information from DB ...
+  Reading misc information ...
+    array <unit> has 0 vertical and 146 horizontal rows
+    11907 pre-routes for map congestion calculation
+  Checking information read in ...
+    design style = Horizontal masters, Horizontal rows
+  Preprocessing design ...
+    splitting rows by natural obstacles ...
+[end initializing data for legality checker]
+Warning: Die area is not integer multiples of min site height (14000), object's width and height(2306400,2306000). (PSYN-523)
+Warning: Die area is not integer multiples of min site width (1900), object's width and height(2306400,2306000). (PSYN-523)
+
+**************************************************** 
+Check_legality: Report for Fixed Placement Cells
+Information: Use the -verbose option to get details about the legality violations. (PSYN-054)
+**************************************************** 
+(fixed placement) Cells Not on Row            : 0
+(fixed placement) Cell Overlaps               : 0
+(fixed placement) Cells overlapping blockages : 0
+(fixed placement) Orientation Violations      : 0
+(fixed placement) Site Violations             : 0
+(fixed placement) Power Strap Violations      : 0
+****************************************************** 
+
+****************************************************** 
+Check_legality: Report for Non-fixed Placement Cells
+Information: Use the -verbose option to get details about the legality violations. (PSYN-054)
+****************************************************** 
+Number of Cells Not on Row            : 0
+Number of Cell Overlaps               : 0
+Number of Cells overlapping blockages : 0
+Number of Orientation Violations      : 0
+Number of Site Violations             : 0
+Number of Power Strap Violations      : 0
+******************************************** 
+
+  Total moveable cell area: 10210.8
+  Total fixed cell area: 0.0
+  Total physical cell area: 10210.8
+  Core area: (131000 131000 2175400 2175000)
+1
+
+
+End CPD check: check_legality_violation
+Start CPD check: cpd_check_tie_connection 
+0
+End CPD check: cpd_check_tie_connection
+Start CPD check: cpd_check_cells_restrictions 
+0
+End CPD check: cpd_check_cells_restrictions
+Start CPD check: check_unplaced_cells 
+1
+End CPD check: check_unplaced_cells
+Start CPD check: check_clock_tree 
+Information: Updating design information... (UID-85)
+Information: Input delay ('fall') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+Information: Input delay ('rise') on clock port 'clk' will be added to the clock's propagated skew. (TIM-112)
+
+*********************** Check_Clock_Tree Summary Report ************************
+There is no issue found !
+******************** End of Check_Clock_Tree Summary Report ********************
+1
+End CPD check: check_clock_tree
+Start CPD check: check_net_routing_rules 
+
+****************************************
+Report : net routing rules
+Design : gng_3_power
+Version: H-2013.03-ICC
+Date   : Sat Apr 21 12:54:09 2018
+****************************************
+
+
+ ---------- All nets use DEFAULT routing rule ----------
+ -------------------------------------------------------
+
+1
+End CPD check: check_net_routing_rules

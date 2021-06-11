@@ -1,0 +1,47 @@
+
+Name of design : gng_3_power
+Number of cell instances in the design : 5001
+Number of cell instance masters in the library : 30
+
+Processing power net VSS ...
+Number of power net wires : 709
+Number of vias : 9432
+Average power dissipation in gng_3_power :   500.00 mW
+Power supply voltage :     1.10 V
+Assigning vias begins
+Assigning power net wires ...
+Constructing virtual grid ..
+Performing virtual connection ...
+Reading virtual power pads
+Extracting power net VSS ...
+Number of power pad nodes connecting to power net VSS : 25
+Number of power pad nodes reaching to the power ports of the leaf cells or blocks : 25
+Number of resistors in VSS : 35866
+Number of nodes in VSS : 29675
+Performing network simulation
+Assigning netlists to simulation engine begins
+Assigning netlists to simulation engine finished
+Maximum IR drop in gng_3_power : 10.67 mV
+Maximum current in gng_3_power : 23.564 mA
+
+Processing power net VDD ...
+Number of power net wires : 913
+Number of vias : 9642
+Average power dissipation in gng_3_power :   500.00 mW
+Power supply voltage :     1.10 V
+Assigning vias begins
+Assigning power net wires ...
+Constructing virtual grid ..
+Performing virtual connection ...
+Reading virtual power pads
+Extracting power net VDD ...
+Number of power pad nodes connecting to power net VDD : 26
+Number of power pad nodes reaching to the power ports of the leaf cells or blocks : 26
+Number of resistors in VDD : 38844
+Number of nodes in VDD : 31340
+Performing network simulation
+Assigning netlists to simulation engine begins
+Assigning netlists to simulation engine finished
+Maximum IR drop in gng_3_power : 12.50 mV
+Maximum current in gng_3_power : 14.981 mA
+Overall takes     0.89 seconds
